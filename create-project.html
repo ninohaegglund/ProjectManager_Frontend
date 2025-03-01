@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Project Manager</title>
+</head>
+<body>
+    <section id="create-project">
+        <div class="container">
+
+            <form id="projectDto" onsubmit="handleProjectDto(event)">
+                <h1>Create Project</h1>
+
+                <div class="form-group">
+                    <label for="projectName">Project</label>
+                    <input type="text" required id="projectName" name="projectName">
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea type="description" id="description" name="description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input required type="date" id="startDate" name="startDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="endDate">End Date</label>
+                    <input required type="date" id="endDate" name="endDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="customer">Customer</label>
+                    <select required name="customer" id="customer"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="statusName">Status</label>
+                    <select name="statusName" id="status"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="task">Task</label>
+                    <select name="task" id="task"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Project Category</label>
+                    <select name="category" id="category"></select>
+                </div>
+
+                <button type="submit" id="customer-btn">Create</button>
+
+                <a href="list-project.html">View Projects</a>
+                
+            </form>
+
+        </div>
+    </section>
+
+    <script src="/js/script.js"></script>
+
+    <script>
+        populateCustomerSelect();
+        populateStatusSelect();
+        populateTaskSelect();
+        populateCategorySelect();
+    </script>
+</body>
+</html>
